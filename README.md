@@ -1,5 +1,11 @@
 # List-Adapter-DiffUtil
 
+-> notifyDataSetChanged is costly.
+
+-> Whenever invoked it updates each and every RecyclerView row. This is costly.
+
+-> DiffUtil does not call each and every row. Instead, it updates only those rows that are different between the Lists of values.
+
 1. DiffUtil  :
 DiffUtil is a utility class that calculates the difference between two lists.
 
