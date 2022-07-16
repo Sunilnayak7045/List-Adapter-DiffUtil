@@ -1,9 +1,22 @@
 # List-Adapter-DiffUtil
 
-DiffUtil  :
+1. DiffUtil  :
 DiffUtil is a utility class that calculates the difference between two lists.
 
 It can be used to calculate updates for a RecyclerView Adapter.
 
-ListAdapter :
+2. ListAdapter :
 ListAdapter is a simple Adapter, in which by-default DiffUtil is implemented & executes difference between Lists on a background thread.
+
+3.RecyclerView with DiffUtil is a way to improve the performance of your app.
+
+4. List Adapter implements diffUtil for you and runs the diffutil algorithm on the background thread. 
+
+5. DiffUtil compares two lists on the background thread and provides the differences between the two lists. 
+
+6. List Adapter class inherits RecyclerView.Adapter class and includes diffutil implementation. 
+
+7. RecyclerView Performance can be optimized using DiffUtil and List Adapter. 
+
+8. Use submitlist method to provide the new list to your recycler view and it will only update the items that are changed, 
+the rest of the items remain the same. 
