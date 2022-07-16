@@ -20,3 +20,40 @@ ListAdapter is a simple Adapter, in which by-default DiffUtil is implemented & e
 
 8. Use submitlist method to provide the new list to your recycler view and it will only update the items that are changed, 
 the rest of the items remain the same. 
+
+Before:
+
+class ProgrammingAdapter : ListAdapter<ProgrammingItem,ProgrammingAdapter.ProgrammingViewHolder>() 
+
+//Inside the constructor we have to pass the DiffUtil implementation i.e how it will compare the 2 list
+
+ { 
+ 
+}
+
+
+After:
+
+class ProgrammingAdapter : ListAdapter<ProgrammingItem,ProgrammingAdapter.ProgrammingViewHolder>(Diffutil()) 
+{
+
+    class Diffutil :  DiffUtil.ItemCallback<ProgrammingItem>() 
+{
+
+        override fun areItemsTheSame(oldItem: ProgrammingItem, newItem: ProgrammingItem): Boolean
+        
+        {
+
+            return oldItem.id == newItem.id
+        }
+
+        // It will check the content are same or not
+        override fun areContentsTheSame(
+            oldItem: ProgrammingItem,
+            newItem: ProgrammingItem
+        ): Boolean {
+
+           return oldItem == newItem
+        }
+    }
+}
