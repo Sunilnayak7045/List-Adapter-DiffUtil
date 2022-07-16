@@ -63,3 +63,13 @@ class ProgrammingAdapter : ListAdapter<ProgrammingItem,ProgrammingAdapter.Progra
         }
     }
 }
+
+
+-> areItemsTheSame(int oldItemPosition, int newItemPosition) : 
+
+      We check if the individual items of the list are same. This can be done through checking their ids.
+
+-> areContentsTheSame(int oldItemPosition, int newItemPosition): 
+
+          This checks if the contents of the List data are the same. 
+          This method is called by DiffUtil only if areItemsTheSame returns true.
